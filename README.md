@@ -5,8 +5,10 @@
 </div>
 <embed name="Hack/MUSIC" src="https://e.top4top.io/m_1967ahko90.mp3" loop="true" hidden="true" autostart="true">
 <br>
-<b>THINK ABOUT DYNAMIT LITTLE BUT DENGROUS</b>
 
+<div align="center">
+<b><i>THINK ABOUT DYNAMITE LITTLE BUT DENGROUS</i></b>
+</div>
 <h2><i> LOVE WITH ATTITUDE  : </i></h2>
 
 <li><i>JUST KEEP IT UP 🙃</li></i>
@@ -28,6 +30,7 @@
 
 <br>
 <div align="center">
-<h2>
+<h2>CONTACT WITH US</h2>
+
 <h4><i><b><a href ="https://www.facebook.com/mAoVirUs2116/">MAO-VIRUS</a></b></i></h4>
 </div>
