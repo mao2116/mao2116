@@ -2,11 +2,8 @@
 <link rel="stylesheet" href="https://development.guardiran.org/public/official-deface-page/dependencies/css/root.css" type="text/css">
    
 <p id="guardiran-logo">
-<div align = "center">
   <a href="https://youtube.com/channel/UCkSB55ezk_2vPVwoqmPVZwg">
     <img width="200" heigth="200" src="https://g.top4top.io/p_1894pa7e80.png">
-<br>
-</div>
 </p>
 
 
