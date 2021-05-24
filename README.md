@@ -1,16 +1,5 @@
-# TEST
- <style type="text/css">
- #guardiran-logo {
-    animation-name: spin;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
-    -webkit-animation-name: spin;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 5s;
-} 
-</style>
+# 
+<link rel="stylesheet" href="https://development.guardiran.org/public/official-deface-page/dependencies/css/root.css" type="text/css">
    
 <p id="guardiran-logo">
 <div align = "center">
