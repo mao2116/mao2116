@@ -27,5 +27,7 @@
 
 
 <br>
-<h4><i><b><a href ="https://www.facebook.com/mAoVirUs2116/">MAO-VIRUS</a></b></i><h4>
-
+<div align="center">
+<h2>
+<h4><i><b><a href ="https://www.facebook.com/mAoVirUs2116/">MAO-VIRUS</a></b></i></h4>
+</div>
