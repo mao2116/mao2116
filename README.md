@@ -48,6 +48,6 @@
 <a href="https://github.com/mao2116/tbomb_mao"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=tbomb_mao&theme=dark" height="100" width="300"></a>
 <a href="https://github.com/mao2116/MCLONE"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=MCLONE&theme=dark" height="100" width="300"></a>
 <a href="https://github.com/mao2116/MAO_TOOL"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=MAO_TOOL&theme=dark" height="100" width="300"></a>
-<a href="https://github.com/mao2116/M_U_S"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=M_U_S&theme=dark" height="100" width="300"></a>
+<a href="https://github.com/mao2116/M_U_S"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=M_U_&theme=dark" height="100" width="300"></a>
 <a href="https://github.com/mao2116/M404"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=M404&theme=dark" height="100" width="300"></a>
 <a href="https://github.com/mao2116/MFB"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=MFB&theme=dark" height="100" width="300"></a>
