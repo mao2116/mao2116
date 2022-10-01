@@ -31,7 +31,7 @@
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=mao2116&show_icons=true&theme=dark)
 <br>
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AKXVAU&layout=compact&theme=dark)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mao2116&layout=compact&theme=dark)
 
 <br>
 <h4>
