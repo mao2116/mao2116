@@ -51,4 +51,4 @@
 <a href="https://github.com/mao2116/M_U_S"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=M_U_S&theme=dark" height="100" width="300"></a>
 <a href="https://github.com/mao2116/M404"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=M404&theme=dark" height="100" width="300"></a>
 <a href="https://github.com/mao2116/MFB"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=MFB&theme=dark" height="100" width="300"></a>
-<a href="https://github.com/mao2116/MFB"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=mproxy&theme=dark" height="100" width="300"></a>
+<a href="https://github.com/mao2116/mproxy"><img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=mproxy&theme=dark" height="100" width="300"></a>
