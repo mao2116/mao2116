@@ -80,11 +80,13 @@
 <div align="center">
   <h3>Visitor Count</h3>
 
-  <img 
-    src="https://komarev.com/ghpvc/?username=mao2116&label=PROFILE+VIEWS&color=00ff00&style=for-the-badge" 
-    alt="Profile Views" 
-  />
+<img 
+ src="https://komarev.com/ghpvc/?username=mao2116&label=PROFILE+VIEWS&color=00ff00&style=for-the-badge&base=300000" 
+ alt="Profile Views" 
+/>
+
 </div>
+
 
 ---
 
@@ -109,5 +111,5 @@
 ---
 
 DATE FOOTER -->
-<sub>🔄 System heartbeat: auto-refreshing every 60s | 🔐 AES-256 Encrypted Channel</sub>
+<sub>🔄 System heartbeat: auto-refreshing every 6 hours | 🔐 Secure GitHub Actions Channel</sub>
 <!-- LAST_UPDATED -->2026-06-27 20:24 UTC<!-- /LAST_UPDATED -->
