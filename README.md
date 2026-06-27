@@ -106,7 +106,6 @@
     />
   </picture>
 </div>
-
 ---
 
 DATE FOOTER -->
