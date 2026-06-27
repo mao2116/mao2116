@@ -22,18 +22,18 @@
 <div align="center">
 
   <!-- LIVE_STATS -->
-  ```
-  ┌──────────────────────────────────────┐
-  │       ⚡ LIVE REALITY STATS          │
-  ├──────────────────────────────────────┤
-  │  📦 REPOS    :         21         │
-  │  ⭐ STARS    :        174         │
-  │  👥 FOLLOWERS:          ?         │
-  │  👣 FOLLOWING:          ?         │
-  │  ⏰ UPDATED  : 2026-06-27 18:31 UTC │
-  └──────────────────────────────────────┘
-  ```
-  <!-- /LIVE_STATS -->
+```text
+┌──────────────────────────────────────┐
+│       ⚡ LIVE REALITY STATS          │
+├──────────────────────────────────────┤
+│  📦 REPOS    :                     21 │
+│  ⭐ STARS    :                    175 │
+│  👥 FOLLOWERS:                    382 │
+│  👣 FOLLOWING:                      1 │
+│  ⏰ UPDATED  : 2026-06-27 20:24 UTC   │
+└──────────────────────────────────────┘
+```
+<!-- /LIVE_STATS -->
 
   <br>
 
@@ -110,4 +110,4 @@
 
 DATE FOOTER -->
 <sub>🔄 System heartbeat: auto-refreshing every 60s | 🔐 AES-256 Encrypted Channel</sub>
-<!-- LAST_UPDATED -->2026-06-27 18:31 UTC<!-- /LAST_UPDATED -->
+<!-- LAST_UPDATED -->2026-06-27 20:24 UTC<!-- /LAST_UPDATED -->
