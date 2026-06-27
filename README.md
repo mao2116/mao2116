@@ -75,22 +75,41 @@
 
 </div>
 
+```html
 ---
 
 <div align="center">
   <h3>Visitor Count</h3>
-  <img src="https://profile-counter.glitch.me/mao2116/count.svg" alt="Visitor Count">
+
+  <img 
+    src="https://komarev.com/ghpvc/?username=mao2116&label=PROFILE+VIEWS&color=00ff00&style=for-the-badge" 
+    alt="Profile Views" 
+  />
 </div>
 
 ---
 
 <div align="center">
   <h3>Snake Animation</h3>
-  <img src="https://github.com/mao2116/mao2116/blob/output/github-contribution-grid-snake.svg" alt="Snake Animation">
+
+  <picture>
+    <source 
+      media="(prefers-color-scheme: dark)" 
+      srcset="https://raw.githubusercontent.com/mao2116/mao2116/output/github-contribution-grid-snake-dark.svg"
+    />
+    <source 
+      media="(prefers-color-scheme: light)" 
+      srcset="https://raw.githubusercontent.com/mao2116/mao2116/output/github-contribution-grid-snake.svg"
+    />
+    <img 
+      alt="GitHub Contribution Snake" 
+      src="https://raw.githubusercontent.com/mao2116/mao2116/output/github-contribution-grid-snake.svg"
+    />
+  </picture>
 </div>
 
 ---
-
-<!-- AUTO-UPDATE FOOTER -->
+```
+DATE FOOTER -->
 <sub>🔄 System heartbeat: auto-refreshing every 60s | 🔐 AES-256 Encrypted Channel</sub>
 <!-- LAST_UPDATED -->2026-06-27 18:31 UTC<!-- /LAST_UPDATED -->
