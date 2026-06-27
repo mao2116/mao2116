@@ -33,8 +33,6 @@
 
 <div align="center">
 
-  <img src="https://github-readme-stats.vercel.app/api?username=mao2116&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0D1117&title_color=00FF00&icon_color=00FF00&text_color=00FF00&border_color=00FF00&custom_title=%E2%9A%A1+LIVE+STATS" alt="GitHub Stats">
-
   <br>
 
   <img src="https://streak-stats.demolab.com?user=mao2116&theme=chartreuse-dark&hide_border=true&background=0D1117&ring=00FF00&fire=FF0000&currStreakNum=00FF00&sideNums=00FF00&currStreakLabel=00FF00&sideLabels=00FF00&dates=00FF00" alt="GitHub Streak">
@@ -51,18 +49,84 @@
 
 <div align="center">
 
-|  #  | TOOL                                                     |       TYPE      |   STATUS  |
-| :-: | :------------------------------------------------------- | :-------------: | :-------: |
-|  01 | [📧 **MMAIL**](https://github.com/mao2116/mmail)         |   MAIL UTILITY  | 🟢 ACTIVE |
-|  02 | [📱 **TBOMB_MAO**](https://github.com/mao2116/tbomb_mao) | AUTOMATION TOOL | 🟢 ACTIVE |
-|  03 | [🔄 **MCLONE**](https://github.com/mao2116/MCLONE)       |    CLONE TOOL   | 🟢 ACTIVE |
-|  04 | [⚙️ **MAO_TOOL**](https://github.com/mao2116/MAO_TOOL)   |    MULTI-TOOL   | 🟢 ACTIVE |
-|  05 | [🎵 **M_U_S**](https://github.com/mao2116/M_U_S)         |  MEDIA UTILITY  | 🟢 ACTIVE |
-|  06 | [🚫 **M404**](https://github.com/mao2116/M404)           |    ERROR TOOL   | 🟢 ACTIVE |
-|  07 | [📱 **MFB**](https://github.com/mao2116/MFB)             |   SOCIAL TOOL   | 🟢 ACTIVE |
-|  08 | [🔌 **MPROXY**](https://github.com/mao2116/mproxy)       |    PROXY TOOL   | 🟢 ACTIVE |
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=2500&pause=700&color=00FF00&center=true&vCenter=true&width=500&height=40&lines=%F0%9F%9B%A0%EF%B8%8F+ACTIVE+PROJECTS;%E2%9A%A1+TOOLS+%7C+UTILITIES+%7C+SYSTEMS" alt="Projects Animation">
+
+  <br>
+
+  <table>
+    <tr>
+      <td align="center" width="250">
+        <a href="https://github.com/mao2116/mmail">
+          <img src="https://img.shields.io/badge/MMAIL-Mail%20Utility-00ff00?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="MMAIL">
+        </a>
+        <br>
+        <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff00?style=flat-square&labelColor=0D1117" alt="Active">
+      </td>
+      <td align="center" width="250">
+        <a href="https://github.com/mao2116/tbomb_mao">
+          <img src="https://img.shields.io/badge/TBOMB__MAO-Automation%20Tool-00ff00?style=for-the-badge&logo=terminal&logoColor=white&labelColor=0D1117" alt="TBOMB_MAO">
+        </a>
+        <br>
+        <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff00?style=flat-square&labelColor=0D1117" alt="Active">
+      </td>
+    </tr>
+
+<tr>
+  <td align="center" width="250">
+    <a href="https://github.com/mao2116/MCLONE">
+      <img src="https://img.shields.io/badge/MCLONE-Clone%20Tool-00ff00?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="MCLONE">
+    </a>
+    <br>
+    <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff00?style=flat-square&labelColor=0D1117" alt="Active">
+  </td>
+  <td align="center" width="250">
+    <a href="https://github.com/mao2116/MAO_TOOL">
+      <img src="https://img.shields.io/badge/MAO__TOOL-Multi%20Tool-00ff00?style=for-the-badge&logo=hackthebox&logoColor=white&labelColor=0D1117" alt="MAO_TOOL">
+    </a>
+    <br>
+    <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff00?style=flat-square&labelColor=0D1117" alt="Active">
+  </td>
+</tr>
+
+<tr>
+  <td align="center" width="250">
+    <a href="https://github.com/mao2116/M_U_S">
+      <img src="https://img.shields.io/badge/M__U__S-Media%20Utility-00ff00?style=for-the-badge&logo=spotify&logoColor=white&labelColor=0D1117" alt="M_U_S">
+    </a>
+    <br>
+    <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff00?style=flat-square&labelColor=0D1117" alt="Active">
+  </td>
+  <td align="center" width="250">
+    <a href="https://github.com/mao2116/M404">
+      <img src="https://img.shields.io/badge/M404-Error%20Tool-00ff00?style=for-the-badge&logo=bugatti&logoColor=white&labelColor=0D1117" alt="M404">
+    </a>
+    <br>
+    <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff00?style=flat-square&labelColor=0D1117" alt="Active">
+  </td>
+</tr>
+
+<tr>
+  <td align="center" width="250">
+    <a href="https://github.com/mao2116/MFB">
+      <img src="https://img.shields.io/badge/MFB-Social%20Tool-00ff00?style=for-the-badge&logo=facebook&logoColor=white&labelColor=0D1117" alt="MFB">
+    </a>
+    <br>
+    <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff00?style=flat-square&labelColor=0D1117" alt="Active">
+  </td>
+  <td align="center" width="250">
+    <a href="https://github.com/mao2116/mproxy">
+      <img src="https://img.shields.io/badge/MPROXY-Proxy%20Tool-00ff00?style=for-the-badge&logo=cloudflare&logoColor=white&labelColor=0D1117" alt="MPROXY">
+    </a>
+    <br>
+    <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff00?style=flat-square&labelColor=0D1117" alt="Active">
+  </td>
+</tr>
+
+  </table>
 
 </div>
+
+
 
 ---
 
@@ -94,15 +158,6 @@
 
 <div align="center">
 
-  <h3>Snake Animation</h3>
-
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mao2116/mao2116/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mao2116/mao2116/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/mao2116/mao2116/output/github-contribution-grid-snake.svg">
-  </picture>
-
-</div>
 
 ---
 
