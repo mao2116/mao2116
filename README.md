@@ -22,29 +22,17 @@
 <div align="center">
 
   <!-- LIVE_STATS -->
-
-<div align="center">
-
-<img 
- src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2500&pause=700&color=00FF00&center=true&vCenter=true&width=700&lines=%E2%9A%A1+LIVE+GITHUB+REALITY+STATS;%F0%9F%93%8A+AUTO+UPDATED+BY+GITHUB+ACTIONS;%F0%9F%94%A5+SYSTEM+STATUS+ACTIVE" 
- alt="Live GitHub Stats Animation" 
-/>
-
-<br>
-
-  <img src="https://img.shields.io/badge/Public%20Repos-21-00ff00?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Public Repos">
-  <img src="https://img.shields.io/badge/Total%20Stars-175-00ff00?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Total Stars">
-
-<br>
-
-  <img src="https://img.shields.io/badge/Followers-382-00ff00?style=for-the-badge&logo=githubsponsors&logoColor=white&labelColor=0D1117" alt="Followers">
-  <img src="https://img.shields.io/badge/Following-1-00ff00?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Following">
-
-<br>
-
-  <img src="https://img.shields.io/badge/Last%20Updated-2026--06--27%2020%3A24%20UTC-00ff00?style=for-the-badge&logo=clockify&logoColor=white&labelColor=0D1117" alt="Last Updated">
-
-</div>
+```text
+┌──────────────────────────────────────┐
+│       ⚡ LIVE REALITY STATS          │
+├──────────────────────────────────────┤
+│  📦 REPOS    :                     21 │
+│  ⭐ STARS    :                    175 │
+│  👥 FOLLOWERS:                    382 │
+│  👣 FOLLOWING:                      1 │
+│  ⏰ UPDATED  : 2026-06-27 20:45 UTC   │
+└──────────────────────────────────────┘
+```
 <!-- /LIVE_STATS -->
 
   <br>
@@ -123,4 +111,4 @@
 ---
 
 <sub>🔄 System heartbeat: auto-refreshing every 6 hours | 🔐 Secure GitHub Actions Channel</sub>
-<!-- LAST_UPDATED -->2026-06-27 20:24 UTC<!-- /LAST_UPDATED -->
+<!-- LAST_UPDATED -->2026-06-27 20:45 UTC<!-- /LAST_UPDATED -->
