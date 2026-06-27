@@ -75,23 +75,15 @@ return f"""<!-- LIVE_STATS -->
 ```
 
 <div align="center">
-
-<img 
- src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=2500&pause=700&color=00FF00&center=true&vCenter=true&width=600&height=45&lines=%E2%9A%A1+LIVE+GITHUB+REALITY+STATS;%F0%9F%93%8A+AUTO+UPDATED+BY+GITHUB+ACTIONS;%F0%9F%94%A5+SYSTEM+STATUS+ACTIVE" 
- alt="Live GitHub Stats Animation" 
-/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&duration=2500&pause=700&color=00FF00&center=true&vCenter=true&width=560&height=38&lines=%E2%9A%A1+LIVE+GITHUB+STATS;%F0%9F%93%8A+AUTO+UPDATED;%F0%9F%94%A5+SYSTEM+ACTIVE" alt="Live GitHub Stats Animation">
 
   <br>
 
-  <img src="https://img.shields.io/badge/Repos-{repos}-00ff00?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Repos">
-  <img src="https://img.shields.io/badge/Stars-{stars}-00ff00?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Stars">
-  <img src="https://img.shields.io/badge/Followers-{followers}-00ff00?style=for-the-badge&logo=githubsponsors&logoColor=white&labelColor=0D1117" alt="Followers">
-  <img src="https://img.shields.io/badge/Following-{following}-00ff00?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Following">
-
-  <br>
-
+  <img src="https://img.shields.io/badge/Repos-{repos}-00ff00?style=flat-square&logo=github&logoColor=white&labelColor=0D1117" alt="Repos">
+  <img src="https://img.shields.io/badge/Stars-{stars}-00ff00?style=flat-square&logo=github&logoColor=white&labelColor=0D1117" alt="Stars">
+  <img src="https://img.shields.io/badge/Followers-{followers}-00ff00?style=flat-square&logo=githubsponsors&logoColor=white&labelColor=0D1117" alt="Followers">
+  <img src="https://img.shields.io/badge/Following-{following}-00ff00?style=flat-square&logo=github&logoColor=white&labelColor=0D1117" alt="Following">
   <img src="https://img.shields.io/badge/Updated-{updated}-00ff00?style=flat-square&logo=clockify&logoColor=white&labelColor=0D1117" alt="Last Updated">
-
 </div>
 <!-- /LIVE_STATS -->"""
 
