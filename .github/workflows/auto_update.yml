@@ -1,45 +1,73 @@
-```yml
-name: Auto Update README
+name: Auto Update README and Snake
 
 on:
-  schedule:
-    - cron: "*/30 * * * *"
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+schedule:
+- cron: "17,47 * * * *"
+workflow_dispatch:
 
 permissions:
-  contents: write
+contents: write
 
 jobs:
-  update-readme:
-    runs-on: ubuntu-latest
+update-readme:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+```
+steps:
+  - name: Checkout Main Branch
+    uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
+  - name: Setup Python
+    uses: actions/setup-python@v5
+    with:
+      python-version: "3.x"
 
-      - name: Run README Update Script
-        run: python3 update_readme.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  - name: Check Files
+    run: |
+      ls -la
+      test -f README.md || (echo "README.md not found" && exit 1)
+      test -f update_readme.py || (echo "update_readme.py not found" && exit 1)
 
-      - name: Commit And Push Changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+  - name: Run README Update Script
+    run: python3 update_readme.py
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          if [[ -n $(git status --porcelain) ]]; then
-            git add README.md
-            git commit -m "Auto update README stats"
-            git push
-          else
-            echo "No changes to commit"
-          fi
+  - name: Commit README Changes
+    run: |
+      git config --global user.name "github-actions[bot]"
+      git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      git add README.md
+
+      if git diff --cached --quiet; then
+        echo "No README changes to commit"
+      else
+        git commit -m "Auto update README stats"
+        git push
+      fi
+```
+
+generate-snake:
+runs-on: ubuntu-latest
+
+```
+steps:
+  - name: Generate Snake SVG
+    uses: Platane/snk/svg-only@v3
+    with:
+      github_user_name: mao2116
+      outputs: |
+        dist/github-contribution-grid-snake.svg
+        dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  - name: Push Snake SVG To Output Branch
+    uses: crazy-max/ghaction-github-pages@v4
+    with:
+      target_branch: output
+      build_dir: dist
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
