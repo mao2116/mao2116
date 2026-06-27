@@ -18,7 +18,6 @@
 ## 📊 GitHub Stats
 
 <!-- LIVE_STATS -->
-
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&duration=2500&pause=700&color=00FF00&center=true&vCenter=true&width=560&height=38&lines=%E2%9A%A1+LIVE+GITHUB+STATS;%F0%9F%93%8A+AUTO+UPDATED;%F0%9F%94%A5+SYSTEM+ACTIVE" alt="Live GitHub Stats Animation">
 
