@@ -1,0 +1,160 @@
+name: 🔄 Auto Update README
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-update-readme
+  cancel-in-progress: true
+
+jobs:
+  update-readme:
+    name: 📊 Update README Stats
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 🔄 Update README Live Stats
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import urllib.request
+          from datetime import datetime, UTC
+
+          USERNAME = "mao2116"
+          README_PATH = "README.md"
+
+          def fetch_json(url):
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      "User-Agent": "GitHub-README-Updater",
+                      "Accept": "application/vnd.github+json",
+                  },
+              )
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  return json.loads(response.read().decode("utf-8"))
+
+          def get_stats():
+              try:
+                  user_data = fetch_json(f"https://api.github.com/users/{USERNAME}")
+                  repos_data = fetch_json(
+                      f"https://api.github.com/users/{USERNAME}/repos?per_page=100&type=owner"
+                  )
+
+                  return {
+                      "repos": user_data.get("public_repos", 0),
+                      "stars": sum(repo.get("stargazers_count", 0) for repo in repos_data),
+                      "followers": user_data.get("followers", 0),
+                      "following": user_data.get("following", 0),
+                  }
+
+              except Exception as error:
+                  print(f"GitHub API failed: {error}")
+                  return {
+                      "repos": "?",
+                      "stars": "?",
+                      "followers": "?",
+                      "following": "?",
+                  }
+
+          def stat_line(label, value):
+              return f"│  {label:<11}: {str(value).rjust(22)} │"
+
+          if not os.path.exists(README_PATH):
+              raise FileNotFoundError("README.md not found in repository root.")
+
+          with open(README_PATH, "r", encoding="utf-8") as file:
+              content = file.read()
+
+          stats = get_stats()
+          now = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
+
+          stats_block = f"""<!-- LIVE_STATS -->
+          ```text
+          ┌──────────────────────────────────────┐
+          │       ⚡ LIVE REALITY STATS          │
+          ├──────────────────────────────────────┤
+          {stat_line("📦 REPOS", stats["repos"])}
+          {stat_line("⭐ STARS", stats["stars"])}
+          {stat_line("👥 FOLLOWERS", stats["followers"])}
+          {stat_line("👣 FOLLOWING", stats["following"])}
+          │  ⏰ UPDATED  : {now.ljust(22)} │
+          └──────────────────────────────────────┘
+          ```
+          <!-- /LIVE_STATS -->"""
+
+          if "<!-- LIVE_STATS -->" in content and "<!-- /LIVE_STATS -->" in content:
+              content = re.sub(
+                  r"<!-- LIVE_STATS -->.*?<!-- /LIVE_STATS -->",
+                  stats_block,
+                  content,
+                  flags=re.DOTALL,
+              )
+          else:
+              content += "\n\n## 📊 GitHub Live Stats\n\n" + stats_block + "\n"
+
+          if "<!-- LAST_UPDATED -->" in content and "<!-- /LAST_UPDATED -->" in content:
+              content = re.sub(
+                  r"<!-- LAST_UPDATED -->.*?<!-- /LAST_UPDATED -->",
+                  f"<!-- LAST_UPDATED -->{now}<!-- /LAST_UPDATED -->",
+                  content,
+                  flags=re.DOTALL,
+              )
+          else:
+              content += f"\n\n<!-- LAST_UPDATED -->{now}<!-- /LAST_UPDATED -->\n"
+
+          with open(README_PATH, "w", encoding="utf-8") as file:
+              file.write(content)
+
+          print(f"README updated successfully at {now}")
+          PY
+
+      - name: 🚀 Commit README Changes
+        run: |
+          git config --global user.name "mao2116[bot]"
+          git config --global user.email "mao2116[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No README changes found."
+          else
+            git commit -m "🔄 Auto update README $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+  generate-snake:
+    name: 🐍 Generate Snake Animation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🐍 Generate Contribution Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: mao2116
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: 🚀 Push Snake to Output Branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
