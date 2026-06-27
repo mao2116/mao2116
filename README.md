@@ -22,18 +22,18 @@
 <div align="center">
 
   <!-- LIVE_STATS -->
-  ```
-  ┌──────────────────────────────────────┐
-  │       ⚡ LIVE REALITY STATS          │
-  ├──────────────────────────────────────┤
-  │  📦 REPOS    :          ?         │
-  │  ⭐ STARS    :          ?         │
-  │  👥 FOLLOWERS:          ?         │
-  │  👣 FOLLOWING:          ?         │
-  │  ⏰ UPDATED  : 2024-01-01 00:00 UTC        │
-  └──────────────────────────────────────┘
-  ```
-  <!-- /LIVE_STATS -->
+```
+┌──────────────────────────────────────┐
+│       ⚡ LIVE REALITY STATS          │
+├──────────────────────────────────────┤
+│  📦 REPOS    :                        21 │
+│  ⭐ STARS    :                       174 │
+│  👥 FOLLOWERS:                       382 │
+│  👣 FOLLOWING:                         1 │
+│  ⏰ UPDATED  : 2026-06-27 18:31 UTC      │
+└──────────────────────────────────────┘
+```
+<!-- /LIVE_STATS -->
 
   <br>
 
@@ -51,7 +51,7 @@
 
 <div align="center">
 
-| # | TOOL | TYPE | STATUS | 
+| # | TOOL | TYPE | STATUS |
 |:-:|:----|:----:|:------:|
 | 01 | [📧 **MMAIL**](https://github.com/mao2116/mmail) | MAIL BOMBER | 🟢 |
 | 02 | [💣 **TBOMB_MAO**](https://github.com/mao2116/tbomb_mao) | SMS BOMBER | 🟢 |
@@ -70,8 +70,8 @@
 
 <div align="center">
 
-  <a href="https://www.facebook.com/mao2116/"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=for-the-badge&logo=Facebook&logoColor=white" width="100"></a>
-  <a href="https://linktr.ee/mao2116"><img src="https://img.shields.io/badge/Linktree-1DE9B6?style=for-the-badge&logo=linktree&logoColor=white" width="100"></a>
+  <a href="https://www.facebook.com/mao2116/"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=for-the-badge&logo=Facebook&logoColor=white" alt="Facebook"></a>
+  <a href="https://linktr.ee/mao2116"><img src="https://img.shields.io/badge/Linktree-1DE9B6?style=for-the-badge&logo=linktree&logoColor=white" alt="Linktree"></a>
 
 </div>
 
@@ -86,4 +86,4 @@
 
 <!-- AUTO-UPDATE FOOTER -->
 <sub>🔄 System heartbeat: auto-refreshing every 60s | 🔐 AES-256 Encrypted Channel</sub>
-<!-- LAST_UPDATED -->2024-01-01 00:00 UTC<!-- /LAST_UPDATED -->
+<!-- LAST_UPDATED -->2026-06-27 18:31 UTC<!-- /LAST_UPDATED -->
