@@ -1,50 +1,24 @@
-name: Auto Update README
+name: 🔄 Auto Update README
 
 on:
-workflow_dispatch:
-schedule:
-- cron: "17,47 * * * *"
-
-permissions:
-contents: write
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
-update-readme:
-runs-on: ubuntu-latest
-
-```
-steps:
-  - name: Checkout Repository
-    uses: actions/checkout@v4
-
-  - name: Check Files
-    run: |
-      pwd
-      ls -la
-      test -f README.md || (echo "README.md missing" && exit 1)
-      test -f update_readme.py || (echo "update_readme.py missing" && exit 1)
-
-  - name: Setup Python
-    uses: actions/setup-python@v5
-    with:
-      python-version: "3.x"
-
-  - name: Run Python Script
-    run: python3 update_readme.py
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  - name: Commit README
-    run: |
-      git config user.name "github-actions[bot]"
-      git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      git add README.md
-
-      if git diff --cached --quiet; then
-        echo "No README changes"
-      else
-        git commit -m "Auto update README stats"
-        git push
-      fi
-```
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python update_readme.py
+      - run: |
+          git config --global user.name "mao2116[bot]"
+          git config --global user.email "bot@mao2116"
+          git add README.md
+          git diff --quiet HEAD || git commit -m "🔄 Auto update $(date -u '+%Y-%m-%d %H:%M')"
+          git push
