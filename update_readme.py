@@ -1,31 +1,38 @@
+
 #!/usr/bin/env python3
 """Auto-update README with live GitHub stats"""
 
 import os, re, random
-from datetime import datetime
+from datetime import datetime, UTC
 import urllib.request, json
 
-def get_stats():
+def get_github_stats():
     try:
         url = "https://api.github.com/users/mao2116"
-        req = urllib.request.urlopen(url, timeout=10)
-        data = json.loads(req.read())
+        req = urllib.request.Request(url, headers={
+            'User-Agent': 'Mozilla/5.0'
+        })
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read())
         
-        repos = data.get("public_repos", "?")
-        followers = data.get("followers", "?")
-        following = data.get("following", "?")
+        repos = data.get("public_repos", 0)
+        followers = data.get("followers", 0)
+        following = data.get("following", 0)
         
         url2 = "https://api.github.com/users/mao2116/repos?per_page=100"
-        req2 = urllib.request.urlopen(url2, timeout=10)
-        repos_data = json.loads(req2.read())
+        req2 = urllib.request.Request(url2, headers={
+            'User-Agent': 'Mozilla/5.0'
+        })
+        with urllib.request.urlopen(req2, timeout=10) as response2:
+            repos_data = json.loads(response2.read())
         stars = sum(r.get("stargazers_count", 0) for r in repos_data)
         
         return {"repos": repos, "stars": stars, "followers": followers, "following": following}
     except Exception as e:
-        print(f"Error fetching stats: {e}")
+        print(f"Error fetching GitHub stats: {e}")
         return {"repos": "?", "stars": "?", "followers": "?", "following": "?"}
 
-def update():
+def update_readme():
     path = "README.md"
     if not os.path.exists(path):
         print("README.md not found")
@@ -34,21 +41,30 @@ def update():
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
     
-    stats = get_stats()
-    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    github_stats = get_github_stats()
+    now = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     
-    # Ensure consistent width for the stats box
-    # Adjust padding to accommodate larger numbers if needed
+    # Define a fixed width for the stats box content area for perfect alignment
+    content_width = 25 # This is the width for the actual data part, e.g., '     ?' or '    123'
+    box_width = 40 # Total width of the ASCII box
+
+    # Format stats with dynamic padding to ensure alignment
+    repos_str = str(github_stats["repos"]).rjust(content_width)
+    stars_str = str(github_stats["stars"]).rjust(content_width)
+    followers_str = str(github_stats["followers"]).rjust(content_width)
+    following_str = str(github_stats["following"]).rjust(content_width)
+    updated_str = now.ljust(content_width)
+
     new_stats = f"""<!-- LIVE_STATS -->
 ```
 ┌──────────────────────────────────────┐
 │       ⚡ LIVE REALITY STATS          │
 ├──────────────────────────────────────┤
-│  📦 REPOS    : {str(stats["repos"]).rjust(10)}         │
-│  ⭐ STARS    : {str(stats["stars"]).rjust(10)}         │
-│  👥 FOLLOWERS: {str(stats["followers"]).rjust(10)}         │
-│  👣 FOLLOWING: {str(stats["following"]).rjust(10)}         │
-│  ⏰ UPDATED  : {now}        │
+│  📦 REPOS    : {repos_str} │
+│  ⭐ STARS    : {stars_str} │
+│  👥 FOLLOWERS: {followers_str} │
+│  👣 FOLLOWING: {following_str} │
+│  ⏰ UPDATED  : {updated_str} │
 └──────────────────────────────────────┘
 ```
 <!-- /LIVE_STATS -->"""
@@ -57,7 +73,6 @@ def update():
     if '<!-- LIVE_STATS -->' in content:
         content = re.sub(old_stats_pattern, new_stats, content, flags=re.DOTALL)
     else:
-        # If markers are not found, append to a logical place or add instructions
         print("LIVE_STATS markers not found in README.md. Please ensure they are present.")
         return
     
@@ -72,6 +87,6 @@ def update():
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
     
-    print(f"✅ Updated: {now} | Repos: {stats['repos']} | Stars: {stats['stars']}")
+    print(f"✅ Updated: {now} | Repos: {github_stats['repos']} | Stars: {github_stats['stars']}")
 
-update()
+update_readme()
