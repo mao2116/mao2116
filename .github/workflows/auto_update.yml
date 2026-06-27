@@ -1,0 +1,24 @@
+name: 🔄 Auto Update README
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python update_readme.py
+      - run: |
+          git config --global user.name "mao2116[bot]"
+          git config --global user.email "bot@mao2116"
+          git add README.md
+          git diff --quiet HEAD || git commit -m "🔄 Auto update $(date -u '+%Y-%m-%d %H:%M')"
+          git push
