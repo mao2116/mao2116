@@ -6,7 +6,7 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=mao2116&repo=mao2116&theme=dark&hide_border=true&bg_color=0D1117&title_color=00FF00&icon_color=00FF00&text_color=00FF00" alt="mao2116's GitHub Profile">
   </a>
 
-  <h1>Hi there, I'm mao2116 👋</h1>
+  <h1>Hello, I'm mao2116 </h1>
   <p>A passionate developer and cybersecurity enthusiast.</p>
 
   <br>
