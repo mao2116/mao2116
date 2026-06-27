@@ -75,7 +75,6 @@
 
 </div>
 
-```html
 ---
 
 <div align="center">
@@ -109,7 +108,7 @@
 </div>
 
 ---
-```
+
 DATE FOOTER -->
 <sub>🔄 System heartbeat: auto-refreshing every 60s | 🔐 AES-256 Encrypted Channel</sub>
 <!-- LAST_UPDATED -->2026-06-27 18:31 UTC<!-- /LAST_UPDATED -->
