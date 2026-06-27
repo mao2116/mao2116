@@ -1,24 +1,42 @@
-name: 🔄 Auto Update README
+```yml
+name: Auto Update README
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  update:
+  update-readme:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - run: python update_readme.py
-      - run: |
-          git config --global user.name "mao2116[bot]"
-          git config --global user.email "bot@mao2116"
-          git add README.md
-          git diff --quiet HEAD || git commit -m "🔄 Auto update $(date -u '+%Y-%m-%d %H:%M')"
-          git push
+          python-version: "3.x"
+
+      - name: Run README Update Script
+        run: python3 update_readme.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit And Push Changes
+        run: |
+          git config --global user.name "mao2116"
+          git config --global user.email "mao2116@users.noreply.github.com"
+
+          if [[ -n $(git status --porcelain) ]]; then
+            git add README.md
+            git commit -m "Auto update README stats"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+```
