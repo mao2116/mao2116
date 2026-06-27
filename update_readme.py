@@ -21,7 +21,8 @@ def get_stats( ):
         stars = sum(r.get("stargazers_count", 0) for r in repos_data)
         
         return {"repos": repos, "stars": stars, "followers": followers, "following": following}
-    except:
+    except Exception as e:
+        print(f"Error fetching stats: {e}")
         return {"repos": "?", "stars": "?", "followers": "?", "following": "?"}
 
 def update():
@@ -35,13 +36,7 @@ def update():
     
     stats = get_stats()
     now = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
-    msgs = [
-        "ROOT ACCESS GRANTED",
-        "ALL SYSTEMS OPERATIONAL",
-        "FIREWALL: ACTIVE | VPN: CONNECTED",
-        "UNDETECTED | ANONYMOUS",
-        "HACK THE PLANET"
-    ]
     
-    old_stats = r'<!-- LIVE_STATS -->.*?<!-- /LIVE_STATS -->'
-    new_stats = f'''<!-- LIVE_STATS -->
+    # Ensure consistent width for the stats box
+    # Adjust padding to accommodate larger numbers if needed
+    new_stats = f"""<!-- LIVE_STATS -->
